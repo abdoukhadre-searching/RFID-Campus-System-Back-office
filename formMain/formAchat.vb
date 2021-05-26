@@ -1,5 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class formAchat
+
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Me.Dispose()
     End Sub
@@ -34,11 +35,13 @@ Public Class formAchat
 
     Private Sub btnConfirmAchat_Click(sender As Object, e As EventArgs) Handles btnConfirmAchat.Click
         Try
-            If estVide(cboAchat) = True Then Return
+            If txtCodeAchat.Visible = True Then
+                If estVide(txtCodeAchat) = True Then Return
+            End If
             If estVide(txtMontantAchat) = True Then Return
             If MsgBox("Vous confirmez la transaction ?  ", vbQuestion + vbYesNo) = vbYes Then
                 con.Open()
-                cmd = New MySqlCommand("", con)
+                cmd = New MySqlCommand("INSERT INTO ", con)
                 'cmd.Parameters.AddWithValue("",)
                 'cmd.Parameters.AddWithValue("",)
                 'cmd.Parameters.AddWithValue("",)
@@ -60,5 +63,33 @@ Public Class formAchat
             btnCheckCode.Visible = True
             txtCodeAchat.Visible = True
         End If
+    End Sub
+
+    Private Sub btnAnnulerAchat_Click(sender As Object, e As EventArgs) Handles btnAnnulerAchat.Click
+        txtRFID.Clear()
+        txtCP.Clear()
+        txtNom.Clear()
+        txtPrenom.Clear()
+        txtFiliere.Clear()
+        txtUfr.Clear()
+        txtNiveau.Clear()
+        txtMontantAchat.Clear()
+        txtCodeAchat.Clear()
+        cboAchat.Text = ""
+        LabelSolde.Text = "_____"
+        PictureBox1.Image = My.Resources.businessman
+    End Sub
+
+    Private Sub txtMontantAchat_TextChanged(sender As Object, e As EventArgs) Handles txtMontantAchat.TextChanged
+
+    End Sub
+
+    Private Sub txtMontantAchat_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMontantAchat.KeyPress
+        Select Case Asc(e.KeyChar)
+            Case 48 To 57 ' nombre entre 0 et 9 ici leur code en ASCII
+                'Case &HC 'Valeur de la touche effacer (vbKeyClear)
+            Case Else
+                e.Handled = True
+        End Select
     End Sub
 End Class

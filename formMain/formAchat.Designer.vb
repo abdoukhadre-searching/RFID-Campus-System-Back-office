@@ -25,7 +25,6 @@ Partial Class formAchat
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formAchat))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtCP = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -57,11 +56,13 @@ Partial Class formAchat
         Me.txtMontantAchat = New System.Windows.Forms.TextBox()
         Me.PictureBoxCarte = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBoxCarte, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label9
@@ -86,6 +87,376 @@ Partial Class formAchat
         Me.Panel1.Size = New System.Drawing.Size(1034, 35)
         Me.Panel1.TabIndex = 32
         '
+        'Label13
+        '
+        Me.Label13.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(117, 452)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(59, 19)
+        Me.Label13.TabIndex = 53
+        Me.Label13.Text = "NIVEAU"
+        '
+        'txtCP
+        '
+        Me.txtCP.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtCP.Enabled = False
+        Me.txtCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCP.Location = New System.Drawing.Point(236, 358)
+        Me.txtCP.Name = "txtCP"
+        Me.txtCP.Size = New System.Drawing.Size(276, 26)
+        Me.txtCP.TabIndex = 52
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(83, 363)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(134, 19)
+        Me.Label12.TabIndex = 51
+        Me.Label12.Text = "CODE PERMANENT"
+        '
+        'txtPrenom
+        '
+        Me.txtPrenom.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtPrenom.Enabled = False
+        Me.txtPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrenom.Location = New System.Drawing.Point(236, 328)
+        Me.txtPrenom.Name = "txtPrenom"
+        Me.txtPrenom.Size = New System.Drawing.Size(276, 26)
+        Me.txtPrenom.TabIndex = 46
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(116, 334)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 19)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "PRENOM"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(127, 393)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(35, 19)
+        Me.Label4.TabIndex = 43
+        Me.Label4.Text = "UFR"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(118, 423)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(56, 19)
+        Me.Label3.TabIndex = 42
+        Me.Label3.Text = "FILIERE"
+        '
+        'txtNom
+        '
+        Me.txtNom.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtNom.Enabled = False
+        Me.txtNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNom.Location = New System.Drawing.Point(236, 298)
+        Me.txtNom.Name = "txtNom"
+        Me.txtNom.Size = New System.Drawing.Size(276, 26)
+        Me.txtNom.TabIndex = 41
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(126, 302)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(43, 19)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "NOM"
+        '
+        'txtRFID
+        '
+        Me.txtRFID.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtRFID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRFID.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.txtRFID.Location = New System.Drawing.Point(236, 270)
+        Me.txtRFID.MaxLength = 8
+        Me.txtRFID.Name = "txtRFID"
+        Me.txtRFID.Size = New System.Drawing.Size(276, 24)
+        Me.txtRFID.TabIndex = 39
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(23, 57)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(130, 19)
+        Me.Label1.TabIndex = 38
+        Me.Label1.Text = "Identifiant  n° RFID"
+        '
+        'txtNiveau
+        '
+        Me.txtNiveau.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtNiveau.Enabled = False
+        Me.txtNiveau.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNiveau.Location = New System.Drawing.Point(236, 448)
+        Me.txtNiveau.Name = "txtNiveau"
+        Me.txtNiveau.Size = New System.Drawing.Size(276, 26)
+        Me.txtNiveau.TabIndex = 56
+        '
+        'txtFiliere
+        '
+        Me.txtFiliere.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtFiliere.Enabled = False
+        Me.txtFiliere.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFiliere.Location = New System.Drawing.Point(236, 418)
+        Me.txtFiliere.Name = "txtFiliere"
+        Me.txtFiliere.Size = New System.Drawing.Size(276, 26)
+        Me.txtFiliere.TabIndex = 55
+        '
+        'txtUfr
+        '
+        Me.txtUfr.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtUfr.Enabled = False
+        Me.txtUfr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUfr.Location = New System.Drawing.Point(236, 388)
+        Me.txtUfr.Name = "txtUfr"
+        Me.txtUfr.Size = New System.Drawing.Size(276, 26)
+        Me.txtUfr.TabIndex = 54
+        '
+        'LabelSolde
+        '
+        Me.LabelSolde.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelSolde.Font = New System.Drawing.Font("Calibri", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelSolde.ForeColor = System.Drawing.Color.Green
+        Me.LabelSolde.Location = New System.Drawing.Point(621, 119)
+        Me.LabelSolde.Name = "LabelSolde"
+        Me.LabelSolde.Size = New System.Drawing.Size(249, 85)
+        Me.LabelSolde.TabIndex = 58
+        Me.LabelSolde.Text = "_____"
+        Me.LabelSolde.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(709, 79)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(131, 29)
+        Me.Label6.TabIndex = 59
+        Me.Label6.Text = "Votre solde:"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Green
+        Me.Label8.Location = New System.Drawing.Point(857, 136)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(149, 60)
+        Me.Label8.TabIndex = 60
+        Me.Label8.Text = "Fcfa"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LabelScan
+        '
+        Me.LabelScan.AutoSize = True
+        Me.LabelScan.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelScan.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.LabelScan.Location = New System.Drawing.Point(35, 137)
+        Me.LabelScan.Name = "LabelScan"
+        Me.LabelScan.Size = New System.Drawing.Size(195, 29)
+        Me.LabelScan.TabIndex = 61
+        Me.LabelScan.Text = "Scanner la carte ..."
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Location = New System.Drawing.Point(62, 216)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(493, 297)
+        Me.GroupBox1.TabIndex = 63
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Informations de l'étudiant"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.btnAnnulerAchat)
+        Me.GroupBox2.Controls.Add(Me.btnConfirmAchat)
+        Me.GroupBox2.Controls.Add(Me.btnCheckCode)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.txtCodeAchat)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.txtMontantAchat)
+        Me.GroupBox2.Controls.Add(Me.cboAchat)
+        Me.GroupBox2.Location = New System.Drawing.Point(561, 216)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(458, 297)
+        Me.GroupBox2.TabIndex = 64
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Opération d'achat - Chargement carte"
+        '
+        'btnAnnulerAchat
+        '
+        Me.btnAnnulerAchat.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAnnulerAchat.BackColor = System.Drawing.Color.Gray
+        Me.btnAnnulerAchat.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAnnulerAchat.FlatAppearance.BorderSize = 0
+        Me.btnAnnulerAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnnulerAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnnulerAchat.ForeColor = System.Drawing.Color.White
+        Me.btnAnnulerAchat.Location = New System.Drawing.Point(274, 207)
+        Me.btnAnnulerAchat.Name = "btnAnnulerAchat"
+        Me.btnAnnulerAchat.Size = New System.Drawing.Size(144, 40)
+        Me.btnAnnulerAchat.TabIndex = 46
+        Me.btnAnnulerAchat.Text = "Annuler l'achat"
+        Me.btnAnnulerAchat.UseVisualStyleBackColor = False
+        '
+        'btnConfirmAchat
+        '
+        Me.btnConfirmAchat.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnConfirmAchat.BackColor = System.Drawing.Color.Green
+        Me.btnConfirmAchat.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnConfirmAchat.FlatAppearance.BorderSize = 0
+        Me.btnConfirmAchat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
+        Me.btnConfirmAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfirmAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfirmAchat.ForeColor = System.Drawing.Color.White
+        Me.btnConfirmAchat.Location = New System.Drawing.Point(132, 207)
+        Me.btnConfirmAchat.Name = "btnConfirmAchat"
+        Me.btnConfirmAchat.Size = New System.Drawing.Size(136, 40)
+        Me.btnConfirmAchat.TabIndex = 45
+        Me.btnConfirmAchat.Text = "Confirmer l'achat"
+        Me.btnConfirmAchat.UseVisualStyleBackColor = False
+        '
+        'btnCheckCode
+        '
+        Me.btnCheckCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCheckCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.btnCheckCode.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCheckCode.FlatAppearance.BorderSize = 0
+        Me.btnCheckCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckCode.ForeColor = System.Drawing.Color.White
+        Me.btnCheckCode.Location = New System.Drawing.Point(285, 136)
+        Me.btnCheckCode.Name = "btnCheckCode"
+        Me.btnCheckCode.Size = New System.Drawing.Size(133, 26)
+        Me.btnCheckCode.TabIndex = 44
+        Me.btnCheckCode.Text = "Vérifier le code"
+        Me.btnCheckCode.UseVisualStyleBackColor = False
+        Me.btnCheckCode.Visible = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(18, 59)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(102, 19)
+        Me.Label11.TabIndex = 43
+        Me.Label11.Text = "Autres actions"
+        '
+        'cboAchat
+        '
+        Me.cboAchat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboAchat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboAchat.FormattingEnabled = True
+        Me.cboAchat.Items.AddRange(New Object() {"Acheter via un code pré-généré"})
+        Me.cboAchat.Location = New System.Drawing.Point(132, 50)
+        Me.cboAchat.Name = "cboAchat"
+        Me.cboAchat.Size = New System.Drawing.Size(286, 28)
+        Me.cboAchat.TabIndex = 42
+        '
+        'txtCodeAchat
+        '
+        Me.txtCodeAchat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCodeAchat.BackColor = System.Drawing.Color.PaleGreen
+        Me.txtCodeAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodeAchat.ForeColor = System.Drawing.Color.Green
+        Me.txtCodeAchat.Location = New System.Drawing.Point(132, 136)
+        Me.txtCodeAchat.Name = "txtCodeAchat"
+        Me.txtCodeAchat.Size = New System.Drawing.Size(147, 26)
+        Me.txtCodeAchat.TabIndex = 41
+        Me.txtCodeAchat.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(24, 139)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(94, 19)
+        Me.Label10.TabIndex = 40
+        Me.Label10.Text = "Code d'achat"
+        Me.Label10.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(44, 99)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 19)
+        Me.Label5.TabIndex = 39
+        Me.Label5.Text = "Montant"
+        '
+        'txtMontantAchat
+        '
+        Me.txtMontantAchat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtMontantAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMontantAchat.Location = New System.Drawing.Point(133, 96)
+        Me.txtMontantAchat.Name = "txtMontantAchat"
+        Me.txtMontantAchat.Size = New System.Drawing.Size(285, 26)
+        Me.txtMontantAchat.TabIndex = 0
+        '
+        'PictureBoxCarte
+        '
+        Me.PictureBoxCarte.Image = Global.formMain.My.Resources.Resources.credit_card
+        Me.PictureBoxCarte.Location = New System.Drawing.Point(62, 168)
+        Me.PictureBoxCarte.Name = "PictureBoxCarte"
+        Me.PictureBoxCarte.Size = New System.Drawing.Size(134, 93)
+        Me.PictureBoxCarte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBoxCarte.TabIndex = 62
+        Me.PictureBoxCarte.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.formMain.My.Resources.Resources.businessman
+        Me.PictureBox1.Location = New System.Drawing.Point(236, 65)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(241, 196)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 57
+        Me.PictureBox1.TabStop = False
+        '
         'PictureBox2
         '
         Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -98,344 +469,6 @@ Partial Class formAchat
         Me.PictureBox2.TabIndex = 33
         Me.PictureBox2.TabStop = False
         '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(117, 483)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(59, 19)
-        Me.Label13.TabIndex = 53
-        Me.Label13.Text = "NIVEAU"
-        '
-        'txtCP
-        '
-        Me.txtCP.Enabled = False
-        Me.txtCP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCP.Location = New System.Drawing.Point(236, 389)
-        Me.txtCP.Name = "txtCP"
-        Me.txtCP.Size = New System.Drawing.Size(276, 26)
-        Me.txtCP.TabIndex = 52
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(83, 394)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(134, 19)
-        Me.Label12.TabIndex = 51
-        Me.Label12.Text = "CODE PERMANENT"
-        '
-        'txtPrenom
-        '
-        Me.txtPrenom.Enabled = False
-        Me.txtPrenom.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrenom.Location = New System.Drawing.Point(236, 359)
-        Me.txtPrenom.Name = "txtPrenom"
-        Me.txtPrenom.Size = New System.Drawing.Size(276, 26)
-        Me.txtPrenom.TabIndex = 46
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(116, 365)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(68, 19)
-        Me.Label7.TabIndex = 45
-        Me.Label7.Text = "PRENOM"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(127, 424)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(35, 19)
-        Me.Label4.TabIndex = 43
-        Me.Label4.Text = "UFR"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(118, 454)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(56, 19)
-        Me.Label3.TabIndex = 42
-        Me.Label3.Text = "FILIERE"
-        '
-        'txtNom
-        '
-        Me.txtNom.Enabled = False
-        Me.txtNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNom.Location = New System.Drawing.Point(236, 329)
-        Me.txtNom.Name = "txtNom"
-        Me.txtNom.Size = New System.Drawing.Size(276, 26)
-        Me.txtNom.TabIndex = 41
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(126, 333)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 19)
-        Me.Label2.TabIndex = 40
-        Me.Label2.Text = "NOM"
-        '
-        'txtRFID
-        '
-        Me.txtRFID.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRFID.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.txtRFID.Location = New System.Drawing.Point(236, 301)
-        Me.txtRFID.MaxLength = 8
-        Me.txtRFID.Name = "txtRFID"
-        Me.txtRFID.Size = New System.Drawing.Size(276, 24)
-        Me.txtRFID.TabIndex = 39
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(82, 304)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 19)
-        Me.Label1.TabIndex = 38
-        Me.Label1.Text = "Identifiant  n° RFID"
-        '
-        'txtNiveau
-        '
-        Me.txtNiveau.Enabled = False
-        Me.txtNiveau.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNiveau.Location = New System.Drawing.Point(236, 479)
-        Me.txtNiveau.Name = "txtNiveau"
-        Me.txtNiveau.Size = New System.Drawing.Size(276, 26)
-        Me.txtNiveau.TabIndex = 56
-        '
-        'txtFiliere
-        '
-        Me.txtFiliere.Enabled = False
-        Me.txtFiliere.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtFiliere.Location = New System.Drawing.Point(236, 449)
-        Me.txtFiliere.Name = "txtFiliere"
-        Me.txtFiliere.Size = New System.Drawing.Size(276, 26)
-        Me.txtFiliere.TabIndex = 55
-        '
-        'txtUfr
-        '
-        Me.txtUfr.Enabled = False
-        Me.txtUfr.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUfr.Location = New System.Drawing.Point(236, 419)
-        Me.txtUfr.Name = "txtUfr"
-        Me.txtUfr.Size = New System.Drawing.Size(276, 26)
-        Me.txtUfr.TabIndex = 54
-        '
-        'LabelSolde
-        '
-        Me.LabelSolde.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LabelSolde.Font = New System.Drawing.Font("Calibri", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSolde.ForeColor = System.Drawing.Color.Green
-        Me.LabelSolde.Location = New System.Drawing.Point(662, 121)
-        Me.LabelSolde.Name = "LabelSolde"
-        Me.LabelSolde.Size = New System.Drawing.Size(249, 92)
-        Me.LabelSolde.TabIndex = 58
-        Me.LabelSolde.Text = "_____"
-        Me.LabelSolde.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(719, 54)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(131, 29)
-        Me.Label6.TabIndex = 59
-        Me.Label6.Text = "Votre solde:"
-        '
-        'Label8
-        '
-        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Green
-        Me.Label8.Location = New System.Drawing.Point(870, 150)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(149, 60)
-        Me.Label8.TabIndex = 60
-        Me.Label8.Text = "Fcfa"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LabelScan
-        '
-        Me.LabelScan.AutoSize = True
-        Me.LabelScan.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelScan.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.LabelScan.Location = New System.Drawing.Point(34, 121)
-        Me.LabelScan.Name = "LabelScan"
-        Me.LabelScan.Size = New System.Drawing.Size(195, 29)
-        Me.LabelScan.TabIndex = 61
-        Me.LabelScan.Text = "Scanner la carte ..."
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Location = New System.Drawing.Point(52, 276)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(493, 237)
-        Me.GroupBox1.TabIndex = 63
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Informations de l'étudiant"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.btnAnnulerAchat)
-        Me.GroupBox2.Controls.Add(Me.btnConfirmAchat)
-        Me.GroupBox2.Controls.Add(Me.btnCheckCode)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.cboAchat)
-        Me.GroupBox2.Controls.Add(Me.txtCodeAchat)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtMontantAchat)
-        Me.GroupBox2.Location = New System.Drawing.Point(579, 276)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(440, 237)
-        Me.GroupBox2.TabIndex = 64
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Opération d'achat - Chargement carte"
-        '
-        'btnAnnulerAchat
-        '
-        Me.btnAnnulerAchat.BackColor = System.Drawing.Color.Gray
-        Me.btnAnnulerAchat.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAnnulerAchat.FlatAppearance.BorderSize = 0
-        Me.btnAnnulerAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnnulerAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnnulerAchat.ForeColor = System.Drawing.Color.White
-        Me.btnAnnulerAchat.Location = New System.Drawing.Point(245, 183)
-        Me.btnAnnulerAchat.Name = "btnAnnulerAchat"
-        Me.btnAnnulerAchat.Size = New System.Drawing.Size(134, 40)
-        Me.btnAnnulerAchat.TabIndex = 46
-        Me.btnAnnulerAchat.Text = "Annuler l'achat"
-        Me.btnAnnulerAchat.UseVisualStyleBackColor = False
-        '
-        'btnConfirmAchat
-        '
-        Me.btnConfirmAchat.BackColor = System.Drawing.Color.Green
-        Me.btnConfirmAchat.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnConfirmAchat.FlatAppearance.BorderSize = 0
-        Me.btnConfirmAchat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime
-        Me.btnConfirmAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfirmAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfirmAchat.ForeColor = System.Drawing.Color.White
-        Me.btnConfirmAchat.Location = New System.Drawing.Point(88, 184)
-        Me.btnConfirmAchat.Name = "btnConfirmAchat"
-        Me.btnConfirmAchat.Size = New System.Drawing.Size(135, 40)
-        Me.btnConfirmAchat.TabIndex = 45
-        Me.btnConfirmAchat.Text = "Confirmer l'achat"
-        Me.btnConfirmAchat.UseVisualStyleBackColor = False
-        '
-        'btnCheckCode
-        '
-        Me.btnCheckCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.btnCheckCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCheckCode.FlatAppearance.BorderSize = 0
-        Me.btnCheckCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckCode.ForeColor = System.Drawing.Color.White
-        Me.btnCheckCode.Location = New System.Drawing.Point(282, 110)
-        Me.btnCheckCode.Name = "btnCheckCode"
-        Me.btnCheckCode.Size = New System.Drawing.Size(115, 26)
-        Me.btnCheckCode.TabIndex = 44
-        Me.btnCheckCode.Text = "Vérifier le code"
-        Me.btnCheckCode.UseVisualStyleBackColor = False
-        Me.btnCheckCode.Visible = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(15, 33)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(102, 19)
-        Me.Label11.TabIndex = 43
-        Me.Label11.Text = "Autres actions"
-        '
-        'cboAchat
-        '
-        Me.cboAchat.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cboAchat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboAchat.FormattingEnabled = True
-        Me.cboAchat.Items.AddRange(New Object() {"Acheter via un code pré-généré"})
-        Me.cboAchat.Location = New System.Drawing.Point(129, 29)
-        Me.cboAchat.Name = "cboAchat"
-        Me.cboAchat.Size = New System.Drawing.Size(268, 28)
-        Me.cboAchat.TabIndex = 42
-        '
-        'txtCodeAchat
-        '
-        Me.txtCodeAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodeAchat.ForeColor = System.Drawing.Color.Green
-        Me.txtCodeAchat.Location = New System.Drawing.Point(129, 110)
-        Me.txtCodeAchat.Name = "txtCodeAchat"
-        Me.txtCodeAchat.Size = New System.Drawing.Size(147, 26)
-        Me.txtCodeAchat.TabIndex = 41
-        Me.txtCodeAchat.Visible = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(21, 113)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(94, 19)
-        Me.Label10.TabIndex = 40
-        Me.Label10.Text = "Code d'achat"
-        Me.Label10.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(41, 73)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 19)
-        Me.Label5.TabIndex = 39
-        Me.Label5.Text = "Montant"
-        '
-        'txtMontantAchat
-        '
-        Me.txtMontantAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMontantAchat.Location = New System.Drawing.Point(129, 70)
-        Me.txtMontantAchat.Name = "txtMontantAchat"
-        Me.txtMontantAchat.Size = New System.Drawing.Size(268, 26)
-        Me.txtMontantAchat.TabIndex = 0
-        '
-        'PictureBoxCarte
-        '
-        Me.PictureBoxCarte.Image = Global.formMain.My.Resources.Resources.credit_card
-        Me.PictureBoxCarte.Location = New System.Drawing.Point(62, 153)
-        Me.PictureBoxCarte.Name = "PictureBoxCarte"
-        Me.PictureBoxCarte.Size = New System.Drawing.Size(121, 72)
-        Me.PictureBoxCarte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBoxCarte.TabIndex = 62
-        Me.PictureBoxCarte.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.formMain.My.Resources.Resources.businessman
-        Me.PictureBox1.Location = New System.Drawing.Point(293, 54)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(241, 205)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 57
-        Me.PictureBox1.TabStop = False
-        '
         'formAchat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -443,13 +476,12 @@ Partial Class formAchat
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(1034, 544)
         Me.ControlBox = False
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBoxCarte)
         Me.Controls.Add(Me.LabelScan)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.LabelSolde)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtNiveau)
         Me.Controls.Add(Me.txtFiliere)
         Me.Controls.Add(Me.txtUfr)
@@ -463,20 +495,22 @@ Partial Class formAchat
         Me.Controls.Add(Me.txtNom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtRFID)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.LabelSolde)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "formAchat"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBoxCarte, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

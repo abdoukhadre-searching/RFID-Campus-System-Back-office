@@ -72,11 +72,22 @@
                 .PictureBoxCarte.Visible = False
             End If
         End With
+
+        With formOn_Off_carte
+            If .Label_on_off_carte.Text = "_______________" Then
+                .PictureBox1.Visible = True
+            Else
+                .PictureBox1.Visible = False
+            End If
+        End With
     End Sub
 
     Private Sub ButtonAchat_Click(sender As Object, e As EventArgs) Handles ButtonAchat.Click
         With formAchat
-            .ShowDialog()
+            .TopLevel = False
+            Panel3.Controls.Add(formAchat)
+            .BringToFront()
+            .Show()
         End With
     End Sub
 
@@ -87,7 +98,7 @@
     End Sub
 
     Private Sub ButtonLogout_Click(sender As Object, e As EventArgs) Handles ButtonLogout.Click
-        If MsgBox("Vous-voudriez vous déconnecter ?", vbYesNo + vbQuestion) = vbYes Then
+        If MsgBox("Vous-voudriez vous déconnecter ?", vbQuestion + vbYesNo) = vbYes Then
             Me.Hide()
         End If
     End Sub

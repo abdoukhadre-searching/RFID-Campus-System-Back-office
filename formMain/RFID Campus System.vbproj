@@ -46,6 +46,10 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -122,6 +126,12 @@
     <Compile Include="formNiveau.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formOn_Off_carte.Designer.vb">
+      <DependentUpon>formOn_Off_carte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formOn_Off_carte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="formUfr.Designer.vb">
       <DependentUpon>formUfr.vb</DependentUpon>
     </Compile>
@@ -172,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formNiveau.resx">
       <DependentUpon>formNiveau.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formOn_Off_carte.resx">
+      <DependentUpon>formOn_Off_carte.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formUfr.resx">
       <DependentUpon>formUfr.vb</DependentUpon>
@@ -282,6 +295,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Campus 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uadb Amphi Couloir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UADB10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmer-avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carte rfid.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-icon-animated-gif-191.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

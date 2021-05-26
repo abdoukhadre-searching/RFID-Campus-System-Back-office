@@ -24,7 +24,7 @@ Public Class formUtilisateurs
                 MsgBox("Le mot de passe de confirmation ne correspond pas au précédent ", vbExclamation)
                 Return
             End If
-            If MsgBox("Vous-souhaitez ajouter un nouvel utilisateur ? Cliquer sur 'Oui' pour confirmer", vbQuestion + vbYesNo = vbYes) Then
+            If MsgBox("Vous etes entrain d'ajouter un nouvel utilisateur ? Cliquer sur 'Oui' pour confirmer", vbQuestion + vbYesNo = vbYes) Then
                 con.Open()
                 cmd = New MySqlCommand("", con)
                 With cmd
@@ -61,4 +61,5 @@ Public Class formUtilisateurs
         clear()
         txtNomAg.Focus()
     End Sub
+
 End Class

@@ -72,7 +72,7 @@ Partial Class formEtudiantList
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ToolStrip1.AutoSize = False
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ButtonNewEtu, Me.ToolStripButton1, Me.ToolStripButton4, Me.ToolStripButton3, Me.ToolStripSeparator1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ButtonNewEtu, Me.ToolStripButton1, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(1, 26)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(881, 43)
@@ -313,11 +313,11 @@ Partial Class formEtudiantList
         '
         Me.ToolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripButton3.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripButton3.Image = Global.formMain.My.Resources.Resources.magnifier
+        Me.ToolStripButton3.Image = Global.formMain.My.Resources.Resources.icone_connected
         Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(87, 40)
-        Me.ToolStripButton3.Text = "Rechercher"
+        Me.ToolStripButton3.Size = New System.Drawing.Size(182, 40)
+        Me.ToolStripButton3.Text = "Activer - Désactiver une carte"
         '
         'formEtudiantList
         '

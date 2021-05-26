@@ -79,7 +79,7 @@ Public Class formEtudiantList
 
             End With
         ElseIf colName = "colDelete" Then
-            If MsgBox("Souhaitez-vous vraiment le supprimé cet enregistrement ? ", vbYesNo + vbQuestion = vbYes) Then
+            If MsgBox("Souhaitez-vous vraiment le supprimé cet enregistrement ? ", vbQuestion + vbYesNo = vbYes) Then
                 Try
                     con.Open()
                     cmd = New MySqlCommand("DELETE FROM etudiant WHERE codePermanent LIKE '" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "'", con)
@@ -95,5 +95,13 @@ Public Class formEtudiantList
         End If
     End Sub
 
+    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+        Me.Dispose()
+    End Sub
 
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        With formOn_Off_carte
+            .ShowDialog()
+        End With
+    End Sub
 End Class

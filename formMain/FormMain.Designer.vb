@@ -25,14 +25,8 @@ Partial Class FormMain
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.LabelProfil = New System.Windows.Forms.Label()
-        Me.LabelNomUser = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Timer_Date_Heure = New System.Windows.Forms.Timer(Me.components)
-        Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
-        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
-        Me.LabelDate = New System.Windows.Forms.Label()
         Me.LabelHeure = New System.Windows.Forms.Label()
+        Me.LabelDate = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBoxConnectionStatus = New System.Windows.Forms.PictureBox()
         Me.ButtonConnect_electronik = New System.Windows.Forms.Button()
@@ -43,10 +37,18 @@ Partial Class FormMain
         Me.ButtonPersonnel = New System.Windows.Forms.Button()
         Me.ButtonEtudiant = New System.Windows.Forms.Button()
         Me.ButtonAcceuil = New System.Windows.Forms.Button()
+        Me.LabelProfil = New System.Windows.Forms.Label()
+        Me.LabelNomUser = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Timer_Date_Heure = New System.Windows.Forms.Timer(Me.components)
+        Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBoxConnectionStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -73,42 +75,15 @@ Partial Class FormMain
         Me.Panel1.Size = New System.Drawing.Size(249, 708)
         Me.Panel1.TabIndex = 0
         '
-        'LabelProfil
+        'LabelHeure
         '
-        Me.LabelProfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.LabelProfil.ForeColor = System.Drawing.Color.Cyan
-        Me.LabelProfil.Location = New System.Drawing.Point(23, 163)
-        Me.LabelProfil.Name = "LabelProfil"
-        Me.LabelProfil.Size = New System.Drawing.Size(197, 23)
-        Me.LabelProfil.TabIndex = 2
-        Me.LabelProfil.Text = "Admin"
-        Me.LabelProfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LabelNomUser
-        '
-        Me.LabelNomUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelNomUser.ForeColor = System.Drawing.Color.White
-        Me.LabelNomUser.Location = New System.Drawing.Point(21, 141)
-        Me.LabelNomUser.Name = "LabelNomUser"
-        Me.LabelNomUser.Size = New System.Drawing.Size(197, 23)
-        Me.LabelNomUser.TabIndex = 1
-        Me.LabelNomUser.Text = "Modou  Nar Nongo"
-        Me.LabelNomUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Panel2
-        '
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(249, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(907, 708)
-        Me.Panel2.TabIndex = 1
-        '
-        'Timer_Date_Heure
-        '
-        '
-        'TimerSerialIn
-        '
-        Me.TimerSerialIn.Interval = 1000
+        Me.LabelHeure.ForeColor = System.Drawing.Color.PaleTurquoise
+        Me.LabelHeure.Location = New System.Drawing.Point(23, 217)
+        Me.LabelHeure.Name = "LabelHeure"
+        Me.LabelHeure.Size = New System.Drawing.Size(197, 23)
+        Me.LabelHeure.TabIndex = 41
+        Me.LabelHeure.Text = "Heure"
+        Me.LabelHeure.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LabelDate
         '
@@ -119,16 +94,6 @@ Partial Class FormMain
         Me.LabelDate.TabIndex = 40
         Me.LabelDate.Text = "Date"
         Me.LabelDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'LabelHeure
-        '
-        Me.LabelHeure.ForeColor = System.Drawing.Color.PaleTurquoise
-        Me.LabelHeure.Location = New System.Drawing.Point(23, 217)
-        Me.LabelHeure.Name = "LabelHeure"
-        Me.LabelHeure.Size = New System.Drawing.Size(197, 23)
-        Me.LabelHeure.TabIndex = 41
-        Me.LabelHeure.Text = "Heure"
-        Me.LabelHeure.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
         '
@@ -142,7 +107,7 @@ Partial Class FormMain
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.formMain.My.Resources.Resources.wifi_signal_
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(19, 452)
+        Me.Button1.Location = New System.Drawing.Point(13, 452)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(200, 38)
         Me.Button1.TabIndex = 39
@@ -193,7 +158,7 @@ Partial Class FormMain
         Me.ButtonRevue.ForeColor = System.Drawing.Color.White
         Me.ButtonRevue.Image = Global.formMain.My.Resources.Resources.folder
         Me.ButtonRevue.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonRevue.Location = New System.Drawing.Point(19, 535)
+        Me.ButtonRevue.Location = New System.Drawing.Point(21, 535)
         Me.ButtonRevue.Name = "ButtonRevue"
         Me.ButtonRevue.Size = New System.Drawing.Size(200, 34)
         Me.ButtonRevue.TabIndex = 10
@@ -213,7 +178,7 @@ Partial Class FormMain
         Me.ButtonAchat.ForeColor = System.Drawing.Color.White
         Me.ButtonAchat.Image = Global.formMain.My.Resources.Resources.shopping_cart
         Me.ButtonAchat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonAchat.Location = New System.Drawing.Point(19, 413)
+        Me.ButtonAchat.Location = New System.Drawing.Point(21, 412)
         Me.ButtonAchat.Name = "ButtonAchat"
         Me.ButtonAchat.Size = New System.Drawing.Size(200, 34)
         Me.ButtonAchat.TabIndex = 9
@@ -272,7 +237,7 @@ Partial Class FormMain
         Me.ButtonPersonnel.ForeColor = System.Drawing.Color.White
         Me.ButtonPersonnel.Image = Global.formMain.My.Resources.Resources.profile__1_
         Me.ButtonPersonnel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonPersonnel.Location = New System.Drawing.Point(19, 371)
+        Me.ButtonPersonnel.Location = New System.Drawing.Point(19, 372)
         Me.ButtonPersonnel.Name = "ButtonPersonnel"
         Me.ButtonPersonnel.Size = New System.Drawing.Size(200, 34)
         Me.ButtonPersonnel.TabIndex = 5
@@ -292,7 +257,7 @@ Partial Class FormMain
         Me.ButtonEtudiant.ForeColor = System.Drawing.Color.White
         Me.ButtonEtudiant.Image = Global.formMain.My.Resources.Resources.profile__1_
         Me.ButtonEtudiant.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonEtudiant.Location = New System.Drawing.Point(18, 331)
+        Me.ButtonEtudiant.Location = New System.Drawing.Point(19, 331)
         Me.ButtonEtudiant.Name = "ButtonEtudiant"
         Me.ButtonEtudiant.Size = New System.Drawing.Size(200, 34)
         Me.ButtonEtudiant.TabIndex = 4
@@ -320,6 +285,28 @@ Partial Class FormMain
         Me.ButtonAcceuil.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.ButtonAcceuil.UseVisualStyleBackColor = True
         '
+        'LabelProfil
+        '
+        Me.LabelProfil.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.LabelProfil.ForeColor = System.Drawing.Color.Cyan
+        Me.LabelProfil.Location = New System.Drawing.Point(23, 163)
+        Me.LabelProfil.Name = "LabelProfil"
+        Me.LabelProfil.Size = New System.Drawing.Size(197, 23)
+        Me.LabelProfil.TabIndex = 2
+        Me.LabelProfil.Text = "Admin"
+        Me.LabelProfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'LabelNomUser
+        '
+        Me.LabelNomUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelNomUser.ForeColor = System.Drawing.Color.White
+        Me.LabelNomUser.Location = New System.Drawing.Point(21, 141)
+        Me.LabelNomUser.Name = "LabelNomUser"
+        Me.LabelNomUser.Size = New System.Drawing.Size(197, 23)
+        Me.LabelNomUser.TabIndex = 1
+        Me.LabelNomUser.Text = "Modou  Nar Nongo"
+        Me.LabelNomUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.formMain.My.Resources.Resources.businessman
@@ -329,6 +316,30 @@ Partial Class FormMain
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(249, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(907, 708)
+        Me.Panel2.TabIndex = 1
+        '
+        'Timer_Date_Heure
+        '
+        '
+        'TimerSerialIn
+        '
+        Me.TimerSerialIn.Interval = 1000
+        '
+        'Panel3
+        '
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(907, 708)
+        Me.Panel3.TabIndex = 2
         '
         'FormMain
         '
@@ -344,6 +355,7 @@ Partial Class FormMain
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBoxConnectionStatus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -368,4 +380,5 @@ Partial Class FormMain
     Friend WithEvents Button1 As Button
     Friend WithEvents LabelHeure As Label
     Friend WithEvents LabelDate As Label
+    Friend WithEvents Panel3 As Panel
 End Class
