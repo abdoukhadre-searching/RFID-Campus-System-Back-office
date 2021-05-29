@@ -29,6 +29,7 @@
     Private Sub TimerSerialIn_Tick(sender As Object, e As EventArgs) Handles TimerSerialIn.Tick
         Try
             StrSerialIn = SerialPort1.ReadExisting
+
             If StrSerialIn <> "" Then
                 With formEtudiant
                     .TextBoxRFID.Text = StrSerialIn
@@ -47,7 +48,6 @@
         ElseIf PictureBoxConnectionStatus.Visible = False Then
             PictureBoxConnectionStatus.Visible = True
         End If
-
     End Sub
 
     Private Sub Timer_Date_Heure_Tick(sender As Object, e As EventArgs) Handles Timer_Date_Heure.Tick
@@ -85,7 +85,7 @@
     Private Sub ButtonAchat_Click(sender As Object, e As EventArgs) Handles ButtonAchat.Click
         With formAchat
             .TopLevel = False
-            Panel3.Controls.Add(formAchat)
+            Panel2.Controls.Add(formAchat) ' avant => panel 3
             .BringToFront()
             .Show()
         End With
@@ -93,7 +93,10 @@
 
     Private Sub ButtonUsers_Click(sender As Object, e As EventArgs) Handles ButtonUsers.Click
         With formUtilisateurs
-            .ShowDialog()
+            .TopLevel = False
+            Panel2.Controls.Add(formUtilisateurs) ' avant => panel 4 
+            .BringToFront()
+            .Show()
         End With
     End Sub
 

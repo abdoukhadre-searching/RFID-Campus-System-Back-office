@@ -314,6 +314,18 @@
   <ItemGroup>
     <None Include="Resources\loading-icon-animated-gif-191.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_uadb_i1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectorat_bambey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\uadb Amphi Couloir1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reseaux.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

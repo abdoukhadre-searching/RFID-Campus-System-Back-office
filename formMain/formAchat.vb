@@ -28,6 +28,10 @@ Public Class formAchat
             txtUfr.Text = dr.Item("ufr").ToString
             txtNiveau.Text = dr.Item("niveau").ToString
             LabelSolde.Text = CInt(dr.Item("solde").ToString)
+
+        Else
+            MsgBox("Etudiant non reconnu ! ", vbCritical)
+            txtRFID.Clear()
         End If
         dr.Close() 'add
         con.Close() 'add
@@ -41,7 +45,10 @@ Public Class formAchat
             If estVide(txtMontantAchat) = True Then Return
             If MsgBox("Vous confirmez la transaction ?  ", vbQuestion + vbYesNo) = vbYes Then
                 con.Open()
-                cmd = New MySqlCommand("INSERT INTO ", con)
+                cmd = New MySqlCommand("INSERT INTO achats (montant, type, date, heure, idAgents) VALUES (@montant, @type, @date, @heure, ?)", con)
+                '--------------------------------------------------------------------------
+                '----- on va créer une fonction qui recupere l'id de l'agent connecté -----
+                '--------------------------------------------------------------------------
                 'cmd.Parameters.AddWithValue("",)
                 'cmd.Parameters.AddWithValue("",)
                 'cmd.Parameters.AddWithValue("",)
@@ -92,4 +99,6 @@ Public Class formAchat
                 e.Handled = True
         End Select
     End Sub
+
+
 End Class

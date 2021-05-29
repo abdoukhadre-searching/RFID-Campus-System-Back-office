@@ -10,43 +10,6 @@ Public Class formUtilisateurs
         txtPassword2.PasswordChar = Chr(149)
     End Sub
 
-    Private Sub btnSaveUser_Click(sender As Object, e As EventArgs) Handles btnSaveUser.Click
-        Try
-            If estVide(txtNomAg) = True Then Return
-            If estVide(txtPrenomAg) = True Then Return
-            If estVide(txtEmailAg) = True Then Return
-            If estVide(txtPassword1) = True Then Return
-            If estVide(txtPassword2) = True Then Return
-            If estVide(cboPosition) = True Then Return
-            If estVide(cboProfil) = True Then Return
-
-            If txtPassword1.Text <> txtPassword2.Text Then
-                MsgBox("Le mot de passe de confirmation ne correspond pas au précédent ", vbExclamation)
-                Return
-            End If
-            If MsgBox("Vous etes entrain d'ajouter un nouvel utilisateur ? Cliquer sur 'Oui' pour confirmer", vbQuestion + vbYesNo = vbYes) Then
-                con.Open()
-                cmd = New MySqlCommand("", con)
-                With cmd
-                    '.Parameters.AddWithValue("",)
-                    '.Parameters.AddWithValue("",)
-                    '.Parameters.AddWithValue("",)
-                    '.Parameters.AddWithValue("",)
-                    .ExecuteNonQuery()
-                End With
-                con.Close()
-                MsgBox("Création d'un nouveau compte réussi !! ", vbInformation)
-            End If
-
-
-        Catch ex As Exception
-            con.Close()
-            MsgBox(ex.Message, vbCritical)
-            clear()
-            txtNomAg.Focus()
-        End Try
-    End Sub
-
     Sub clear()
         txtEmailAg.Clear()
         txtNomAg.Clear()
@@ -57,9 +20,47 @@ Public Class formUtilisateurs
         cboProfil.SelectedIndex = -1
     End Sub
 
-    Private Sub btnAnnulerUserCreation_Click(sender As Object, e As EventArgs) Handles btnAnnulerUserCreation.Click
+    Private Sub btnAnnulerUserCreation_Click(sender As Object, e As EventArgs)
         clear()
         txtNomAg.Focus()
     End Sub
 
+    Private Sub btnSaveUser_Click_1(sender As Object, e As EventArgs) Handles btnSaveUser.Click
+        Try
+
+            If estVide(txtNomAg) = True Then Return
+            If estVide(txtPrenomAg) = True Then Return
+            'If estVide(txtEmailAg) = True Then Return
+            'If estVide(txtPassword1) = True Then Return
+            'If estVide(txtPassword2) = True Then Return
+            If estVide(cboPosition) = True Then Return
+            If estVide(cboProfil) = True Then Return
+
+            If txtPassword1.Text <> txtPassword2.Text Then
+                MsgBox("Le mot de passe de confirmation ne correspond pas au précédent ", vbExclamation)
+                Return
+            End If
+
+            If MsgBox("Ajout des informations personnelles d'un nouvel utilisateur ? Cliquer sur 'Oui' pour confirmer", vbQuestion + vbYesNo) = vbYes Then
+                con.Open()
+                cmd = New MySqlCommand("INSERT INTO agents (nom, prenom, position, profil) VALUES (@nom, @prenom, @position, @profil)", con)
+                With cmd
+                    .Parameters.AddWithValue("@nom", txtNomAg.Text)
+                    .Parameters.AddWithValue("@prenom", txtPrenomAg.Text)
+                    .Parameters.AddWithValue("@position", cboPosition.Text)
+                    .Parameters.AddWithValue("@profil", cboProfil.Text)
+                    .ExecuteNonQuery()
+                End With
+                con.Close()
+                MsgBox("C'est bon. Vous pouvez gérer ses informations d'authentification plutard !! ", vbInformation)
+                clear()
+            End If
+
+        Catch ex As Exception
+            con.Close()
+            MsgBox(ex.Message, vbCritical)
+            clear()
+            txtNomAg.Focus()
+        End Try
+    End Sub
 End Class
