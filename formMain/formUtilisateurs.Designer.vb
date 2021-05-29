@@ -35,18 +35,13 @@ Partial Class formUtilisateurs
         Me.cboProfil = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboPosition = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNomAg = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtEmailAg = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtPrenomAg = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtPassword1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtPassword2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtEmailAg = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
@@ -57,7 +52,6 @@ Partial Class formUtilisateurs
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -124,7 +118,6 @@ Partial Class formUtilisateurs
         Me.Panel2.Controls.Add(Me.btnAnnulerUserCreation)
         Me.Panel2.Controls.Add(Me.btnSaveUser)
         Me.Panel2.Controls.Add(Me.GroupBox1)
-        Me.Panel2.Controls.Add(Me.GroupBox2)
         Me.Panel2.Location = New System.Drawing.Point(3, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(868, 431)
@@ -167,14 +160,16 @@ Partial Class formUtilisateurs
         Me.GroupBox1.Controls.Add(Me.cboProfil)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.cboPosition)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.txtNomAg)
         Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtEmailAg)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txtPrenomAg)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Location = New System.Drawing.Point(41, 20)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(793, 175)
+        Me.GroupBox1.Size = New System.Drawing.Size(793, 252)
         Me.GroupBox1.TabIndex = 48
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informations personnelles"
@@ -185,7 +180,7 @@ Partial Class formUtilisateurs
         Me.cboProfil.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.cboProfil.FormattingEnabled = True
         Me.cboProfil.Items.AddRange(New Object() {"Admin", "Gérant Ticket", "Gérant Restaurant"})
-        Me.cboProfil.Location = New System.Drawing.Point(97, 87)
+        Me.cboProfil.Location = New System.Drawing.Point(89, 126)
         Me.cboProfil.Name = "cboProfil"
         Me.cboProfil.Size = New System.Drawing.Size(667, 27)
         Me.cboProfil.TabIndex = 12
@@ -195,7 +190,7 @@ Partial Class formUtilisateurs
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(41, 28)
+        Me.Label1.Location = New System.Drawing.Point(19, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(42, 19)
         Me.Label1.TabIndex = 0
@@ -207,14 +202,25 @@ Partial Class formUtilisateurs
         Me.cboPosition.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboPosition.FormattingEnabled = True
         Me.cboPosition.Items.AddRange(New Object() {"CAMPUS 1 ( Pavillon A à Entrée Est)", "CAMPUS 2 ( Porte Restaurant Europe ) ", "CAMPUS 2 ( Pavillon C à l'entrée Ouest )", "CAMPUS 2 ( Pavillon D à l'entrée Ouest )", "Restaurant Campus 1", "Restaurant Campus 2"})
-        Me.cboPosition.Location = New System.Drawing.Point(97, 122)
+        Me.cboPosition.Location = New System.Drawing.Point(89, 161)
         Me.cboPosition.Name = "cboPosition"
         Me.cboPosition.Size = New System.Drawing.Size(667, 27)
         Me.cboPosition.TabIndex = 13
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(19, 99)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(46, 19)
+        Me.Label3.TabIndex = 4
+        Me.Label3.Text = "Email"
+        '
         'txtNomAg
         '
-        Me.txtNomAg.Location = New System.Drawing.Point(97, 27)
+        Me.txtNomAg.Location = New System.Drawing.Point(89, 24)
         Me.txtNomAg.Name = "txtNomAg"
         Me.txtNomAg.Size = New System.Drawing.Size(667, 23)
         Me.txtNomAg.TabIndex = 1
@@ -224,18 +230,25 @@ Partial Class formUtilisateurs
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(25, 60)
+        Me.Label4.Location = New System.Drawing.Point(19, 62)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 19)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Prénom"
+        '
+        'txtEmailAg
+        '
+        Me.txtEmailAg.Location = New System.Drawing.Point(89, 95)
+        Me.txtEmailAg.Name = "txtEmailAg"
+        Me.txtEmailAg.Size = New System.Drawing.Size(667, 23)
+        Me.txtEmailAg.TabIndex = 5
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(23, 125)
+        Me.Label7.Location = New System.Drawing.Point(19, 169)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 19)
         Me.Label7.TabIndex = 11
@@ -243,9 +256,9 @@ Partial Class formUtilisateurs
         '
         'txtPrenomAg
         '
-        Me.txtPrenomAg.Location = New System.Drawing.Point(97, 57)
+        Me.txtPrenomAg.Location = New System.Drawing.Point(89, 58)
         Me.txtPrenomAg.Name = "txtPrenomAg"
-        Me.txtPrenomAg.Size = New System.Drawing.Size(666, 23)
+        Me.txtPrenomAg.Size = New System.Drawing.Size(667, 23)
         Me.txtPrenomAg.TabIndex = 7
         '
         'Label6
@@ -253,83 +266,11 @@ Partial Class formUtilisateurs
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(37, 93)
+        Me.Label6.Location = New System.Drawing.Point(19, 134)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(46, 19)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Profil"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.txtPassword1)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txtPassword2)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.txtEmailAg)
-        Me.GroupBox2.Location = New System.Drawing.Point(41, 216)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(793, 150)
-        Me.GroupBox2.TabIndex = 49
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Informations d'authentification"
-        '
-        'txtPassword1
-        '
-        Me.txtPassword1.Enabled = False
-        Me.txtPassword1.Location = New System.Drawing.Point(219, 60)
-        Me.txtPassword1.Name = "txtPassword1"
-        Me.txtPassword1.Size = New System.Drawing.Size(545, 23)
-        Me.txtPassword1.TabIndex = 3
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(105, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 19)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Mot de passe"
-        '
-        'txtPassword2
-        '
-        Me.txtPassword2.Enabled = False
-        Me.txtPassword2.Location = New System.Drawing.Point(219, 93)
-        Me.txtPassword2.Name = "txtPassword2"
-        Me.txtPassword2.Size = New System.Drawing.Size(545, 23)
-        Me.txtPassword2.TabIndex = 9
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(155, 30)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 19)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Email"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(26, 97)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(180, 19)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Ré-ecrire le mot de passe"
-        '
-        'txtEmailAg
-        '
-        Me.txtEmailAg.Enabled = False
-        Me.txtEmailAg.Location = New System.Drawing.Point(220, 26)
-        Me.txtEmailAg.Name = "txtEmailAg"
-        Me.txtEmailAg.Size = New System.Drawing.Size(544, 23)
-        Me.txtEmailAg.TabIndex = 5
         '
         'TabPage2
         '
@@ -399,8 +340,6 @@ Partial Class formUtilisateurs
         Me.Panel2.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -418,8 +357,6 @@ Partial Class formUtilisateurs
     Friend WithEvents Label4 As Label
     Friend WithEvents txtEmailAg As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtPassword1 As TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtNomAg As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
@@ -427,11 +364,8 @@ Partial Class formUtilisateurs
     Friend WithEvents cboProfil As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtPassword2 As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnAnnulerUserCreation As Button
     Friend WithEvents btnSaveUser As Button
     Friend WithEvents Label8 As Label
