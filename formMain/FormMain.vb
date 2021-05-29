@@ -17,7 +17,7 @@
         With formConnexionArduino
             .cboBaudRate.SelectedIndex = 3
         End With
-        Connection()
+        Connection() 'sera dans le load du formulaire de la page login
     End Sub
 
     Private Sub ButtonConnect_electronik_Click(sender As Object, e As EventArgs) Handles ButtonConnect_electronik.Click
@@ -105,4 +105,5 @@
             Me.Hide()
         End If
     End Sub
+
 End Class

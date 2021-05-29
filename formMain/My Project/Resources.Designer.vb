@@ -343,6 +343,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property rectorat_bambey1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("rectorat_bambey1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property rectorat_bambey2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("rectorat_bambey2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property refresh() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("refresh", resourceCulture)
@@ -396,6 +416,16 @@ Namespace My.Resources
         Friend ReadOnly Property uadb_Amphi_Couloir1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("uadb Amphi Couloir1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property uadb_Amphi_Couloir2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("uadb Amphi Couloir2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

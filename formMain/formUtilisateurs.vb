@@ -52,7 +52,7 @@ Public Class formUtilisateurs
                     .ExecuteNonQuery()
                 End With
                 con.Close()
-                MsgBox("C'est bon. Vous pouvez gérer ses informations d'authentification plutard !! ", vbInformation)
+                MsgBox("C'est bon ! Maintenant vous pouvez gérer ses informations d'authentification plutard. ", vbInformation)
                 clear()
             End If
 

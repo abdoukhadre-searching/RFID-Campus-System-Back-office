@@ -19,7 +19,7 @@ Public Class formEtudiant
             If estVide(TextBoxRFID) = True Then Return
 
             con.Open()
-            cmd = New MySqlCommand("insert into etudiant (codePermanent, nom, prenom, filiere, ufr, niveau, dateNaissance, lieuNaissance, adresse, idCarte, etatCarte, solde, image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", con)
+            cmd = New MySqlCommand("INSERT INTO etudiant (codePermanent, nom, prenom, filiere, ufr, niveau, dateNaissance, lieuNaissance, adresse, idCarte, etatCarte, solde, image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)", con)
             Dim mstream As New MemoryStream
             PictureBox1.Image.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg)
             Dim tabImage() As Byte = mstream.GetBuffer

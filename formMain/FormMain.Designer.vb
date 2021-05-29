@@ -41,16 +41,12 @@ Partial Class FormMain
         Me.LabelNomUser = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Timer_Date_Heure = New System.Windows.Forms.Timer(Me.components)
         Me.TimerSerialIn = New System.Windows.Forms.Timer(Me.components)
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBoxConnectionStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -321,29 +317,11 @@ Partial Class FormMain
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Panel3)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(249, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(907, 708)
         Me.Panel2.TabIndex = 1
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(907, 708)
-        Me.Panel3.TabIndex = 2
-        '
-        'Panel4
-        '
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(0, 0)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(907, 708)
-        Me.Panel4.TabIndex = 3
         '
         'Timer_Date_Heure
         '
@@ -365,8 +343,6 @@ Partial Class FormMain
         Me.Panel1.ResumeLayout(False)
         CType(Me.PictureBoxConnectionStatus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -391,6 +367,4 @@ Partial Class FormMain
     Friend WithEvents Button1 As Button
     Friend WithEvents LabelHeure As Label
     Friend WithEvents LabelDate As Label
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel4 As Panel
 End Class

@@ -1,9 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
+
 Module Module1_connection
 
     Public con As New MySqlConnection
     Public cmd As New MySqlCommand
     Public dr As MySqlDataReader
+    Public nom_User As String
+    Public motdepasse_User As String
+    Public role_User As String
 
     Public Sub Connection()
         con = New MySqlConnection
@@ -22,6 +26,5 @@ Module Module1_connection
             estVide = False
         End If
     End Function
-
 
 End Module

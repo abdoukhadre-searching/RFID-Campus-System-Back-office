@@ -24,7 +24,6 @@ Partial Class formUtilisateurs
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formUtilisateurs))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -51,8 +50,9 @@ Partial Class formUtilisateurs
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -60,6 +60,7 @@ Partial Class formUtilisateurs
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -72,18 +73,6 @@ Partial Class formUtilisateurs
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1116, 35)
         Me.Panel1.TabIndex = 33
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox2.Image = Global.formMain.My.Resources.Resources.cancel
-        Me.PictureBox2.Location = New System.Drawing.Point(1082, 9)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(22, 20)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 33
-        Me.PictureBox2.TabStop = False
         '
         'Label9
         '
@@ -101,6 +90,7 @@ Partial Class formUtilisateurs
         Me.TabControl1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Location = New System.Drawing.Point(27, 70)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -333,13 +323,13 @@ Partial Class formUtilisateurs
         '
         'TabPage2
         '
+        Me.TabPage2.BackColor = System.Drawing.Color.Lavender
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(874, 437)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Changer de mot de passe"
-        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -374,6 +364,27 @@ Partial Class formUtilisateurs
         Me.PictureBox1.TabIndex = 36
         Me.PictureBox1.TabStop = False
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Image = Global.formMain.My.Resources.Resources.cancel
+        Me.PictureBox2.Location = New System.Drawing.Point(1082, 9)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(22, 20)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 33
+        Me.PictureBox2.TabStop = False
+        '
+        'TabPage3
+        '
+        Me.TabPage3.BackColor = System.Drawing.Color.Lavender
+        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Size = New System.Drawing.Size(874, 437)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Réglages par défautl"
+        '
         'formUtilisateurs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -393,7 +404,6 @@ Partial Class formUtilisateurs
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
@@ -403,6 +413,7 @@ Partial Class formUtilisateurs
         Me.GroupBox2.PerformLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -436,4 +447,5 @@ Partial Class formUtilisateurs
     Friend WithEvents btnSaveUser As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents TabPage3 As TabPage
 End Class
