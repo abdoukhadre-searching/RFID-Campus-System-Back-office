@@ -4,8 +4,8 @@ Public Class formEtudiantList
     Private Sub ButtonNewEtu_Click(sender As Object, e As EventArgs) Handles ButtonNewEtu.Click
         With formEtudiant
             .ButtonSave.Enabled = True
+            .ButtonModifier.Enabled = False
             .TextBoxRFID.Text = ""
-            .GetUFR()
             .ShowDialog()
         End With
     End Sub
@@ -17,30 +17,26 @@ Public Class formEtudiantList
             con.Open()
             cmd = New MySqlCommand("select * from etudiant", con)
             dr = cmd.ExecuteReader
-            While dr.Read
+            While dr.Read()
                 i += 1
-                DataGridView1.Rows.Add(i, dr.Item("codePermanent").ToString, dr.Item("nom").ToString, dr.Item("prenom").ToString, dr.Item("filiere").ToString, dr.Item("ufr").ToString, dr.Item("niveau").ToString, dr.Item("dateNaissance").ToString, dr.Item("lieuNaissance").ToString, dr.Item("adresse").ToString, dr.Item("idCarte").ToString, dr.Item("etatCarte").ToString, dr.Item("solde").ToString)
+                DataGridView1.Rows.Add(i, dr.Item("codePermanent").ToString, dr.Item("nom").ToString, dr.Item("prenom").ToString, dr.Item("dateNaissance").ToString, dr.Item("lieuNaissance").ToString, dr.Item("adresse").ToString, dr.Item("idCarte").ToString, dr.Item("etatCarte").ToString, dr.Item("solde").ToString, dr.Item("ufr").ToString, dr.Item("filiere").ToString, dr.Item("niveau").ToString)
             End While
             dr.Close()
             con.Close()
         Catch ex As Exception
-            MsgBox("Vérifier que votre serveur est bien connecté  !" & vbCr & ex.Message, MsgBoxStyle.Critical, "Message d'erreur")
+            MsgBox(ex.StackTrace & vbCr & ex.Message, MsgBoxStyle.Critical, "Message d'erreur")
             con.Close()
-            ' Return 'adddddd
         End Try
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         Dim colName As String = DataGridView1.Columns(e.ColumnIndex).Name
-        Dim _filiere As String = ""
-        Dim _ufr As String = ""
-        Dim _niveau As String = ""
 
         If colName = "colEdit" Then
             With formEtudiant
                 Try
                     con.Open()
-                    cmd = New MySqlCommand("SELECT codePermanent, nom, prenom, filiere, ufr, niveau, dateNaissance, lieuNaissance, adresse, idCarte, etatCarte, solde, image  FROM etudiant WHERE codePermanent = '" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "'", con)
+                    cmd = New MySqlCommand("SELECT codePermanent, nom, prenom, dateNaissance, lieuNaissance, adresse, idCarte, etatCarte, solde, image, ufr , filiere, niveau FROM etudiant WHERE codePermanent = '" & DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString & "'", con)
                     dr = cmd.ExecuteReader
                     dr.Read()
                     If dr.HasRows Then
@@ -55,9 +51,9 @@ Public Class formEtudiantList
                         .TextBoxLieuN.Text = dr.Item("lieuNaissance").ToString
                         .TextBoxAdresse.Text = dr.Item("adresse").ToString
                         .DateTimePicker1.Text = dr.Item("dateNaissance").ToString
-                        _filiere = dr.Item("filiere").ToString
-                        _ufr = dr.Item("ufr").ToString
-                        _niveau = dr.Item("niveau").ToString
+                        .ComboBoxFilière.Text = dr.Item("filiere").ToString
+                        .ComboBoxUfr.Text = dr.Item("ufr").ToString
+                        .ComboBoxNiveau.Text = dr.Item("niveau").ToString
                         .TextBoxRFID.Text = dr.Item("idCarte").ToString
                         .TextBoxCodeP.Enabled = False
                         .ButtonSave.Enabled = False
@@ -65,12 +61,6 @@ Public Class formEtudiantList
                     End If
                     dr.Close()
                     con.Close()
-                    .GetFiliere()
-                    .GetUFR()
-                    .GetNiveau()
-                    .ComboBoxFilière.Text = _filiere
-                    .ComboBoxNiveau.Text = _niveau
-                    .ComboBoxUfr.Text = _ufr
                     .Show()
                 Catch ex As Exception
                     con.Close()

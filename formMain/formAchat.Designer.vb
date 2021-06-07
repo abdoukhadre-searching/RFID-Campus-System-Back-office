@@ -71,7 +71,6 @@ Partial Class formAchat
         '
         Me.Label9.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Image = Global.formMain.My.Resources.Resources.Connected
         Me.Label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Label9.Location = New System.Drawing.Point(424, 12)
         Me.Label9.Name = "Label9"
@@ -85,7 +84,7 @@ Partial Class formAchat
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 181)
+        Me.Panel1.Location = New System.Drawing.Point(0, 133)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1034, 49)
         Me.Panel1.TabIndex = 32
@@ -202,7 +201,7 @@ Partial Class formAchat
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 57)
+        Me.Label1.Location = New System.Drawing.Point(23, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(130, 19)
         Me.Label1.TabIndex = 38
@@ -244,9 +243,9 @@ Partial Class formAchat
         Me.LabelSolde.BackColor = System.Drawing.Color.Transparent
         Me.LabelSolde.Font = New System.Drawing.Font("Calibri", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelSolde.ForeColor = System.Drawing.Color.Green
-        Me.LabelSolde.Location = New System.Drawing.Point(633, 107)
+        Me.LabelSolde.Location = New System.Drawing.Point(647, 130)
         Me.LabelSolde.Name = "LabelSolde"
-        Me.LabelSolde.Size = New System.Drawing.Size(249, 85)
+        Me.LabelSolde.Size = New System.Drawing.Size(237, 74)
         Me.LabelSolde.TabIndex = 58
         Me.LabelSolde.Text = "_____"
         Me.LabelSolde.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -283,7 +282,7 @@ Partial Class formAchat
         Me.LabelScan.BackColor = System.Drawing.Color.Transparent
         Me.LabelScan.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelScan.ForeColor = System.Drawing.Color.RoyalBlue
-        Me.LabelScan.Location = New System.Drawing.Point(45, 79)
+        Me.LabelScan.Location = New System.Drawing.Point(472, 101)
         Me.LabelScan.Name = "LabelScan"
         Me.LabelScan.Size = New System.Drawing.Size(195, 29)
         Me.LabelScan.TabIndex = 61
@@ -293,9 +292,9 @@ Partial Class formAchat
         '
         Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(62, 216)
+        Me.GroupBox1.Location = New System.Drawing.Point(62, 236)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(493, 297)
+        Me.GroupBox1.Size = New System.Drawing.Size(493, 277)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informations de l'étudiant"
@@ -312,9 +311,9 @@ Partial Class formAchat
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.txtMontantAchat)
         Me.GroupBox2.Controls.Add(Me.cboAchat)
-        Me.GroupBox2.Location = New System.Drawing.Point(561, 216)
+        Me.GroupBox2.Location = New System.Drawing.Point(561, 236)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(458, 297)
+        Me.GroupBox2.Size = New System.Drawing.Size(458, 277)
         Me.GroupBox2.TabIndex = 64
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Opération d'achat - Chargement carte"
@@ -328,7 +327,7 @@ Partial Class formAchat
         Me.btnAnnulerAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnnulerAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAnnulerAchat.ForeColor = System.Drawing.Color.White
-        Me.btnAnnulerAchat.Location = New System.Drawing.Point(274, 207)
+        Me.btnAnnulerAchat.Location = New System.Drawing.Point(274, 187)
         Me.btnAnnulerAchat.Name = "btnAnnulerAchat"
         Me.btnAnnulerAchat.Size = New System.Drawing.Size(144, 40)
         Me.btnAnnulerAchat.TabIndex = 46
@@ -345,7 +344,7 @@ Partial Class formAchat
         Me.btnConfirmAchat.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfirmAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmAchat.ForeColor = System.Drawing.Color.White
-        Me.btnConfirmAchat.Location = New System.Drawing.Point(132, 207)
+        Me.btnConfirmAchat.Location = New System.Drawing.Point(132, 187)
         Me.btnConfirmAchat.Name = "btnConfirmAchat"
         Me.btnConfirmAchat.Size = New System.Drawing.Size(136, 40)
         Me.btnConfirmAchat.TabIndex = 45
@@ -361,7 +360,7 @@ Partial Class formAchat
         Me.btnCheckCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCheckCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCheckCode.ForeColor = System.Drawing.Color.White
-        Me.btnCheckCode.Location = New System.Drawing.Point(285, 136)
+        Me.btnCheckCode.Location = New System.Drawing.Point(285, 116)
         Me.btnCheckCode.Name = "btnCheckCode"
         Me.btnCheckCode.Size = New System.Drawing.Size(133, 26)
         Me.btnCheckCode.TabIndex = 44
@@ -375,7 +374,7 @@ Partial Class formAchat
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(18, 59)
+        Me.Label11.Location = New System.Drawing.Point(18, 39)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(102, 19)
         Me.Label11.TabIndex = 43
@@ -388,7 +387,7 @@ Partial Class formAchat
         Me.txtCodeAchat.BackColor = System.Drawing.Color.PaleGreen
         Me.txtCodeAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCodeAchat.ForeColor = System.Drawing.Color.Green
-        Me.txtCodeAchat.Location = New System.Drawing.Point(132, 136)
+        Me.txtCodeAchat.Location = New System.Drawing.Point(132, 116)
         Me.txtCodeAchat.Name = "txtCodeAchat"
         Me.txtCodeAchat.Size = New System.Drawing.Size(147, 26)
         Me.txtCodeAchat.TabIndex = 41
@@ -400,7 +399,7 @@ Partial Class formAchat
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(24, 139)
+        Me.Label10.Location = New System.Drawing.Point(24, 119)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(94, 19)
         Me.Label10.TabIndex = 40
@@ -413,7 +412,7 @@ Partial Class formAchat
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(44, 99)
+        Me.Label5.Location = New System.Drawing.Point(44, 79)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 19)
         Me.Label5.TabIndex = 39
@@ -424,7 +423,7 @@ Partial Class formAchat
         Me.txtMontantAchat.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtMontantAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMontantAchat.Location = New System.Drawing.Point(133, 96)
+        Me.txtMontantAchat.Location = New System.Drawing.Point(133, 76)
         Me.txtMontantAchat.Name = "txtMontantAchat"
         Me.txtMontantAchat.Size = New System.Drawing.Size(285, 26)
         Me.txtMontantAchat.TabIndex = 0
@@ -437,7 +436,7 @@ Partial Class formAchat
         Me.cboAchat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboAchat.FormattingEnabled = True
         Me.cboAchat.Items.AddRange(New Object() {"Acheter via un code pré-généré"})
-        Me.cboAchat.Location = New System.Drawing.Point(132, 50)
+        Me.cboAchat.Location = New System.Drawing.Point(132, 30)
         Me.cboAchat.Name = "cboAchat"
         Me.cboAchat.Size = New System.Drawing.Size(286, 28)
         Me.cboAchat.TabIndex = 42
@@ -447,7 +446,7 @@ Partial Class formAchat
         Me.PictureBoxCarte.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBoxCarte.BackColor = System.Drawing.Color.Transparent
         Me.PictureBoxCarte.Image = Global.formMain.My.Resources.Resources.credit_card
-        Me.PictureBoxCarte.Location = New System.Drawing.Point(50, 107)
+        Me.PictureBoxCarte.Location = New System.Drawing.Point(477, 136)
         Me.PictureBoxCarte.Name = "PictureBoxCarte"
         Me.PictureBoxCarte.Size = New System.Drawing.Size(175, 103)
         Me.PictureBoxCarte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -458,10 +457,11 @@ Partial Class formAchat
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox1.Image = Global.formMain.My.Resources.Resources.businessman
-        Me.PictureBox1.Location = New System.Drawing.Point(254, 34)
+        Me.PictureBox1.Location = New System.Drawing.Point(183, 24)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(241, 196)
+        Me.PictureBox1.Size = New System.Drawing.Size(271, 196)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 57
         Me.PictureBox1.TabStop = False
@@ -472,9 +472,9 @@ Partial Class formAchat
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Image = Global.formMain.My.Resources.Resources.cancel
-        Me.PictureBox2.Location = New System.Drawing.Point(990, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(990, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(29, 26)
+        Me.PictureBox2.Size = New System.Drawing.Size(44, 28)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 33
         Me.PictureBox2.TabStop = False
@@ -485,7 +485,7 @@ Partial Class formAchat
         Me.PictureBox3.Image = Global.formMain.My.Resources.Resources.UADB10
         Me.PictureBox3.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(1034, 181)
+        Me.PictureBox3.Size = New System.Drawing.Size(1034, 133)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 65
         Me.PictureBox3.TabStop = False
@@ -497,8 +497,8 @@ Partial Class formAchat
         Me.BackColor = System.Drawing.Color.Lavender
         Me.ClientSize = New System.Drawing.Size(1034, 544)
         Me.ControlBox = False
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBoxCarte)
+        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.LabelScan)
         Me.Controls.Add(Me.PictureBox1)
@@ -518,9 +518,9 @@ Partial Class formAchat
         Me.Controls.Add(Me.txtRFID)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.LabelSolde)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.PictureBox3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "formAchat"

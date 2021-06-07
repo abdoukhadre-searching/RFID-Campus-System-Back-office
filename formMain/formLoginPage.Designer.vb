@@ -25,10 +25,10 @@ Partial Class formLoginPage
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formLoginPage))
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.txtUserNom = New System.Windows.Forms.TextBox()
         Me.txtPasswordUser = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnCheckCode = New System.Windows.Forms.Button()
+        Me.btnConnecterLogin = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -62,15 +62,15 @@ Partial Class formLoginPage
         Me.Label2.TabIndex = 41
         Me.Label2.Text = "Nom utilisateur"
         '
-        'txtUser
+        'txtUserNom
         '
-        Me.txtUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.Location = New System.Drawing.Point(65, 213)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(306, 23)
-        Me.txtUser.TabIndex = 42
-        Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtUserNom.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtUserNom.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUserNom.Location = New System.Drawing.Point(65, 213)
+        Me.txtUserNom.Name = "txtUserNom"
+        Me.txtUserNom.Size = New System.Drawing.Size(306, 23)
+        Me.txtUserNom.TabIndex = 42
+        Me.txtUserNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPasswordUser
         '
@@ -93,21 +93,21 @@ Partial Class formLoginPage
         Me.Label3.TabIndex = 43
         Me.Label3.Text = "Mot de passe"
         '
-        'btnCheckCode
+        'btnConnecterLogin
         '
-        Me.btnCheckCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCheckCode.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
-        Me.btnCheckCode.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCheckCode.FlatAppearance.BorderSize = 0
-        Me.btnCheckCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCheckCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCheckCode.ForeColor = System.Drawing.Color.White
-        Me.btnCheckCode.Location = New System.Drawing.Point(65, 292)
-        Me.btnCheckCode.Name = "btnCheckCode"
-        Me.btnCheckCode.Size = New System.Drawing.Size(306, 31)
-        Me.btnCheckCode.TabIndex = 45
-        Me.btnCheckCode.Text = "Connecter"
-        Me.btnCheckCode.UseVisualStyleBackColor = False
+        Me.btnConnecterLogin.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnConnecterLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(56, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(122, Byte), Integer))
+        Me.btnConnecterLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnConnecterLogin.FlatAppearance.BorderSize = 0
+        Me.btnConnecterLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConnecterLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConnecterLogin.ForeColor = System.Drawing.Color.White
+        Me.btnConnecterLogin.Location = New System.Drawing.Point(65, 292)
+        Me.btnConnecterLogin.Name = "btnConnecterLogin"
+        Me.btnConnecterLogin.Size = New System.Drawing.Size(306, 31)
+        Me.btnConnecterLogin.TabIndex = 45
+        Me.btnConnecterLogin.Text = "Connecter"
+        Me.btnConnecterLogin.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -166,15 +166,15 @@ Partial Class formLoginPage
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnCheckCode)
+        Me.Controls.Add(Me.btnConnecterLogin)
         Me.Controls.Add(Me.txtPasswordUser)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.txtUserNom)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.PictureBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "formLoginPage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -190,10 +190,10 @@ Partial Class formLoginPage
     Friend WithEvents Label8 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtUser As TextBox
+    Friend WithEvents txtUserNom As TextBox
     Friend WithEvents txtPasswordUser As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnCheckCode As Button
+    Friend WithEvents btnConnecterLogin As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox3 As PictureBox
 End Class

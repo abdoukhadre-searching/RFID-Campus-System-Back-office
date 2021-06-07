@@ -110,12 +110,6 @@
     <Compile Include="formConnexionArduino.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formFilieres.Designer.vb">
-      <DependentUpon>formFilieres.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formFilieres.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="formLoginPage.Designer.vb">
       <DependentUpon>formLoginPage.vb</DependentUpon>
     </Compile>
@@ -141,28 +135,22 @@
     <Compile Include="formEtudiantList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formNiveau.Designer.vb">
-      <DependentUpon>formNiveau.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formNiveau.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="formOn_Off_carte.Designer.vb">
       <DependentUpon>formOn_Off_carte.vb</DependentUpon>
     </Compile>
     <Compile Include="formOn_Off_carte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formUfr.Designer.vb">
-      <DependentUpon>formUfr.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formUfr.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="formUtilisateurs.Designer.vb">
       <DependentUpon>formUtilisateurs.vb</DependentUpon>
     </Compile>
     <Compile Include="formUtilisateurs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1_connection.vb" />
@@ -189,9 +177,6 @@
     <EmbeddedResource Include="formConnexionArduino.resx">
       <DependentUpon>formConnexionArduino.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formFilieres.resx">
-      <DependentUpon>formFilieres.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formLoginPage.resx">
       <DependentUpon>formLoginPage.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,17 +189,14 @@
     <EmbeddedResource Include="formEtudiantList.resx">
       <DependentUpon>formEtudiantList.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formNiveau.resx">
-      <DependentUpon>formNiveau.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formOn_Off_carte.resx">
       <DependentUpon>formOn_Off_carte.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formUfr.resx">
-      <DependentUpon>formUfr.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formUtilisateurs.resx">
       <DependentUpon>formUtilisateurs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

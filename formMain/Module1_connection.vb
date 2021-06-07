@@ -8,6 +8,7 @@ Module Module1_connection
     Public nom_User As String
     Public motdepasse_User As String
     Public role_User As String
+    'Public id_agent As Integer
 
     Public Sub Connection()
         con = New MySqlConnection

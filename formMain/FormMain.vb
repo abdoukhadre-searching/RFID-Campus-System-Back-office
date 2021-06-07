@@ -17,7 +17,7 @@
         With formConnexionArduino
             .cboBaudRate.SelectedIndex = 3
         End With
-        Connection() 'sera dans le load du formulaire de la page login
+        Connection() '...ce sera dans le load du formulaire de la page login
     End Sub
 
     Private Sub ButtonConnect_electronik_Click(sender As Object, e As EventArgs) Handles ButtonConnect_electronik.Click
@@ -102,8 +102,8 @@
 
     Private Sub ButtonLogout_Click(sender As Object, e As EventArgs) Handles ButtonLogout.Click
         If MsgBox("Vous-voudriez vous déconnecter ?", vbQuestion + vbYesNo) = vbYes Then
-            Me.Hide()
+            Me.Dispose()
+            LoginForm.Show()
         End If
     End Sub
-
 End Class

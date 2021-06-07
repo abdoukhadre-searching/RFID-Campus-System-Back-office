@@ -64,7 +64,6 @@ Public Class formUtilisateurs
         Catch ex As Exception
             con.Close()
             MsgBox(ex.Message, vbCritical)
-            '           clear()
             txtNomAg.Focus()
         End Try
     End Sub

@@ -38,10 +38,6 @@ Partial Class formEtudiant
         Me.ComboBoxFilière = New System.Windows.Forms.ComboBox()
         Me.TextBoxLieuN = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel4 = New System.Windows.Forms.LinkLabel()
         Me.ButtonSave = New System.Windows.Forms.Button()
         Me.ButtonModifier = New System.Windows.Forms.Button()
         Me.ButtonAnnuler = New System.Windows.Forms.Button()
@@ -53,8 +49,6 @@ Partial Class formEtudiant
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ComboBoxNiveau = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.LinkLabel5 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel6 = New System.Windows.Forms.LinkLabel()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -171,18 +165,20 @@ Partial Class formEtudiant
         '
         Me.ComboBoxUfr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxUfr.FormattingEnabled = True
+        Me.ComboBoxUfr.Items.AddRange(New Object() {"SATIC", "ECOMIJ", "SDD", "ISFAR"})
         Me.ComboBoxUfr.Location = New System.Drawing.Point(186, 290)
         Me.ComboBoxUfr.Name = "ComboBoxUfr"
-        Me.ComboBoxUfr.Size = New System.Drawing.Size(162, 23)
+        Me.ComboBoxUfr.Size = New System.Drawing.Size(276, 23)
         Me.ComboBoxUfr.TabIndex = 16
         '
         'ComboBoxFilière
         '
         Me.ComboBoxFilière.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxFilière.FormattingEnabled = True
+        Me.ComboBoxFilière.Items.AddRange(New Object() {"Mathématiques", "Mathématiques et Applications", "Administration et Développement d’Applications", "Licence Professionnelle Création Multimédia", "Système Réseaux Télécoms", "Systèmes et Réseaux", "Systèmes d’Information", "Physique Chimie", "Chimie Appliquée", "Chimie Inorganique", "Chimie Organique", "Chimie Physique", "Statistique et Informatique Décisonnelle", "Economie Appliquée", "Finance Comptabilité", "Management Responsable des Organisations", "Administration Publique", "Juriste d’Affaires", "Commerce Electronique et Cyber-sécurité", "Management Juridique Environnemental et Foncier", "Santé Communautaire", "Agriculture et Développement Durable", "Environnement", "Responsabilité Sociétale des Entreprise/Santé", "Médecine", "Nutrition", "Promotion de la Santé", "Suivi-évaluation"})
         Me.ComboBoxFilière.Location = New System.Drawing.Point(186, 319)
         Me.ComboBoxFilière.Name = "ComboBoxFilière"
-        Me.ComboBoxFilière.Size = New System.Drawing.Size(162, 23)
+        Me.ComboBoxFilière.Size = New System.Drawing.Size(276, 23)
         Me.ComboBoxFilière.TabIndex = 17
         '
         'TextBoxLieuN
@@ -201,46 +197,6 @@ Partial Class formEtudiant
         Me.Label6.Size = New System.Drawing.Size(137, 19)
         Me.Label6.TabIndex = 18
         Me.Label6.Text = "LIEU DE NAISSANCE"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(354, 294)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(45, 15)
-        Me.LinkLabel1.TabIndex = 20
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Ajouter"
-        '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(401, 294)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(65, 15)
-        Me.LinkLabel2.TabIndex = 21
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Supprimer"
-        '
-        'LinkLabel3
-        '
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(402, 322)
-        Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(65, 15)
-        Me.LinkLabel3.TabIndex = 23
-        Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "Supprimer"
-        '
-        'LinkLabel4
-        '
-        Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Location = New System.Drawing.Point(354, 322)
-        Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(45, 15)
-        Me.LinkLabel4.TabIndex = 22
-        Me.LinkLabel4.TabStop = True
-        Me.LinkLabel4.Text = "Ajouter"
         '
         'ButtonSave
         '
@@ -347,9 +303,10 @@ Partial Class formEtudiant
         '
         Me.ComboBoxNiveau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxNiveau.FormattingEnabled = True
+        Me.ComboBoxNiveau.Items.AddRange(New Object() {"Licence 1 ", "Licence 2 ", "Licence 3 ", "Master 1 ", "Master 2", "Doctorat 1", "Doctorat 2"})
         Me.ComboBoxNiveau.Location = New System.Drawing.Point(186, 350)
         Me.ComboBoxNiveau.Name = "ComboBoxNiveau"
-        Me.ComboBoxNiveau.Size = New System.Drawing.Size(162, 23)
+        Me.ComboBoxNiveau.Size = New System.Drawing.Size(276, 23)
         Me.ComboBoxNiveau.TabIndex = 38
         '
         'Label13
@@ -362,32 +319,13 @@ Partial Class formEtudiant
         Me.Label13.TabIndex = 37
         Me.Label13.Text = "NIVEAU"
         '
-        'LinkLabel5
-        '
-        Me.LinkLabel5.AutoSize = True
-        Me.LinkLabel5.Location = New System.Drawing.Point(354, 354)
-        Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(45, 15)
-        Me.LinkLabel5.TabIndex = 39
-        Me.LinkLabel5.TabStop = True
-        Me.LinkLabel5.Text = "Ajouter"
-        '
-        'LinkLabel6
-        '
-        Me.LinkLabel6.AutoSize = True
-        Me.LinkLabel6.Location = New System.Drawing.Point(401, 355)
-        Me.LinkLabel6.Name = "LinkLabel6"
-        Me.LinkLabel6.Size = New System.Drawing.Size(65, 15)
-        Me.LinkLabel6.TabIndex = 40
-        Me.LinkLabel6.TabStop = True
-        Me.LinkLabel6.Text = "Supprimer"
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.CustomFormat = "0000-00-00"
         Me.DateTimePicker1.Location = New System.Drawing.Point(186, 175)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(226, 21)
@@ -425,9 +363,7 @@ Partial Class formEtudiant
         Me.ClientSize = New System.Drawing.Size(886, 454)
         Me.ControlBox = False
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.LinkLabel6)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.LinkLabel5)
         Me.Controls.Add(Me.ComboBoxNiveau)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.TextBoxCodeP)
@@ -440,10 +376,6 @@ Partial Class formEtudiant
         Me.Controls.Add(Me.ButtonAnnuler)
         Me.Controls.Add(Me.ButtonModifier)
         Me.Controls.Add(Me.ButtonSave)
-        Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.LinkLabel4)
-        Me.Controls.Add(Me.LinkLabel2)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.TextBoxLieuN)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBoxFilière)
@@ -485,10 +417,6 @@ Partial Class formEtudiant
     Friend WithEvents ComboBoxFilière As ComboBox
     Friend WithEvents TextBoxLieuN As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
-    Friend WithEvents LinkLabel3 As LinkLabel
-    Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents ButtonSave As Button
     Friend WithEvents ButtonModifier As Button
     Friend WithEvents ButtonAnnuler As Button
@@ -504,8 +432,6 @@ Partial Class formEtudiant
     Friend WithEvents ComboBoxNiveau As ComboBox
     Friend WithEvents Label13 As Label
     Friend WithEvents ComboBoxUfr As ComboBox
-    Friend WithEvents LinkLabel5 As LinkLabel
-    Friend WithEvents LinkLabel6 As LinkLabel
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
